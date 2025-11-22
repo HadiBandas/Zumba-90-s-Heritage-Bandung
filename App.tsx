@@ -14,6 +14,7 @@ import { LayoutMap } from './components/LayoutMap';
 import { RACI } from './components/RACI';
 import { KPI } from './components/KPI';
 import { Committee } from './components/Committee';
+import { Organigram } from './components/Organigram';
 import { Contact } from './components/Contact';
 import { ChevronDown, ChevronUp, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -30,9 +31,10 @@ const sections = [
   { id: 'prizes', label: 'Doorprize', component: Prizes },
   { id: 'prize-dist', label: 'Distribusi Hadiah', component: PrizeDistribution },
   { id: 'map', label: 'Peta Lokasi', component: LayoutMap },
+  { id: 'organigram', label: 'Organigram', component: Organigram },
+  { id: 'committee', label: 'Panitia', component: Committee },
   { id: 'raci', label: 'RACI Matrix', component: RACI },
   { id: 'kpi', label: 'KPI', component: KPI },
-  { id: 'committee', label: 'Panitia', component: Committee },
   { id: 'contact', label: 'Kontak', component: Contact },
 ];
 

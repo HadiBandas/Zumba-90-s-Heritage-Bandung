@@ -25,7 +25,7 @@ export const Committee: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {division.members.map((member, mIdx) => (
                   <div key={mIdx} className="bg-white border-2 border-black shadow-sm p-4 md:p-5 flex flex-col h-full rounded-lg hover:shadow-retro transition-all">
-                    <div className="mb-3 border-b-2 border-black/10 pb-2">
+                    <div className={`${division.division !== "STEERING COMMITTEE" ? 'mb-3 border-b-2 border-black/10 pb-2' : ''}`}>
                       <span className="block font-retro-sub text-xs text-gray-500 uppercase mb-1 tracking-wide">{member.role}</span>
                       <h4 className="font-retro-heading text-2xl leading-none text-retro-purple mb-2">{member.name}</h4>
                       {member.organization && (
@@ -35,8 +35,8 @@ export const Committee: React.FC = () => {
                       )}
                     </div>
                     
-                    {/* Job Description */}
-                    {member.jobDescription && member.jobDescription.length > 0 && (
+                    {/* Job Description - HIDDEN for Steering Committee */}
+                    {division.division !== "STEERING COMMITTEE" && member.jobDescription && member.jobDescription.length > 0 && (
                       <div className="bg-gray-50 p-3 rounded border border-gray-200 flex-1">
                         <ul className="space-y-2">
                           {member.jobDescription.map((task, tIdx) => (
