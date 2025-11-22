@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MapPin, Store, Speaker, ClipboardList, LayoutDashboard, ZoomIn, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,17 +7,17 @@ export const LayoutMap: React.FC = () => {
 
   return (
     <div className="flex flex-col h-full w-full p-4 max-w-6xl mx-auto">
-      <div className="shrink-0 text-center mb-6 mt-2 md:mt-0 md:mb-8">
+      <div className="shrink-0 text-center mb-4 mt-2 md:mt-0 md:mb-8">
         <h2 className="text-3xl md:text-5xl font-retro-heading text-white leading-tight" style={{ textShadow: '3px 3px 0 #000' }}>
           TATA LETAK AREA
         </h2>
       </div>
 
       <div className="flex-1 overflow-y-auto w-full pb-32 md:pb-0 px-2">
-        <div className="flex flex-col lg:flex-row gap-6 w-full pb-4 h-full">
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-6 w-full pb-4 lg:h-full">
           {/* Map Image Container - Clickable */}
           <div 
-            className="w-full lg:w-3/4 bg-white border-4 border-black shadow-retro relative rounded-xl overflow-hidden shrink-0 min-h-[300px] flex items-center justify-center bg-gray-100 group cursor-zoom-in transition-transform hover:scale-[1.01]"
+            className="w-full lg:w-3/4 bg-white border-4 border-black shadow-retro relative rounded-xl overflow-hidden shrink-0 min-h-[300px] md:min-h-0 flex items-center justify-center bg-gray-100 group cursor-zoom-in transition-transform hover:scale-[1.01]"
             onClick={() => setIsZoomed(true)}
           >
               {/* Placeholder Content - Replace with <img> */}
@@ -41,7 +40,7 @@ export const LayoutMap: React.FC = () => {
 
           {/* Legend */}
           <div className="w-full lg:w-1/4 flex flex-col justify-start gap-4 shrink-0">
-              <div className="bg-white border-2 border-black p-5 shadow-retro rounded-lg h-full overflow-y-auto">
+              <div className="bg-white border-2 border-black p-5 shadow-retro rounded-lg lg:h-full overflow-y-auto">
                   <h3 className="font-retro-sub text-xl md:text-2xl mb-4 border-b-2 border-black inline-block">LEGENDA</h3>
                   <ul className="space-y-4 font-body text-sm md:text-base">
                       <li className="flex items-start gap-3">

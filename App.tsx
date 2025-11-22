@@ -11,6 +11,7 @@ import { Rundown } from './components/Rundown';
 import { Prizes } from './components/Prizes';
 import { PrizeDistribution } from './components/PrizeDistribution';
 import { LayoutMap } from './components/LayoutMap';
+import { RACI } from './components/RACI';
 import { KPI } from './components/KPI';
 import { Committee } from './components/Committee';
 import { Contact } from './components/Contact';
@@ -29,6 +30,7 @@ const sections = [
   { id: 'prizes', label: 'Doorprize', component: Prizes },
   { id: 'prize-dist', label: 'Distribusi Hadiah', component: PrizeDistribution },
   { id: 'map', label: 'Peta Lokasi', component: LayoutMap },
+  { id: 'raci', label: 'RACI Matrix', component: RACI },
   { id: 'kpi', label: 'KPI', component: KPI },
   { id: 'committee', label: 'Panitia', component: Committee },
   { id: 'contact', label: 'Kontak', component: Contact },
@@ -92,7 +94,7 @@ const App: React.FC = () => {
       </div>
 
       {/* Mobile Bottom Navigation Bar */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t-4 border-black z-50 px-4 py-3 shadow-[0px_-4px_10px_rgba(0,0,0,0.2)] flex justify-between items-center pb-safe safe-area-bottom">
+      <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t-4 border-black z-50 px-4 py-3 pb-safe shadow-[0px_-4px_10px_rgba(0,0,0,0.2)] flex justify-between items-center">
         <button 
           onClick={prevSection} 
           disabled={activeSection === 0}

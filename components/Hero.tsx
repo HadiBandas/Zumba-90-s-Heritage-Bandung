@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Clock, ShieldAlert, Zap, Music4 } from 'lucide-react';
@@ -6,8 +5,8 @@ import { EVENT_DETAILS } from '../constants';
 
 // Helper component for Countdown Boxes
 const TimeBox = ({ value, label, color }: { value: number | string; label: string; color: string }) => (
-  <div className={`flex flex-col items-center justify-center ${color} border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl p-2 w-16 h-16 md:w-24 md:h-24 transition-transform hover:-translate-y-2 transform shrink-0`}>
-    <span className="font-retro-heading text-2xl md:text-5xl leading-none text-black drop-shadow-sm">{value.toString().padStart(2, '0')}</span>
+  <div className={`flex flex-col items-center justify-center ${color} border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl p-2 w-14 h-14 md:w-24 md:h-24 transition-transform hover:-translate-y-2 transform shrink-0`}>
+    <span className="font-retro-heading text-xl md:text-5xl leading-none text-black drop-shadow-sm">{value.toString().padStart(2, '0')}</span>
     <span className="font-body font-black text-[8px] md:text-xs uppercase mt-1 text-black/80 tracking-widest">{label}</span>
   </div>
 );
@@ -100,10 +99,10 @@ export const Hero: React.FC = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", bounce: 0.5 }}
-            className="relative text-center w-full mb-6 md:mb-8"
+            className="relative text-center w-full mb-6 md:mb-8 px-2"
           >
             <h1 
-              className="text-5xl md:text-9xl font-retro-heading text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] md:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] stroke-black mb-2 leading-[0.9]"
+              className="text-5xl sm:text-6xl md:text-9xl font-retro-heading text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] md:drop-shadow-[6px_6px_0px_rgba(0,0,0,1)] stroke-black mb-2 leading-[0.9] break-words"
               style={{ textShadow: '4px 4px 0 #000', WebkitTextStroke: '1px black' }}
             >
               <span className="text-retro-yellow block text-xl md:text-5xl mb-1 tracking-wider font-normal">BACK TO THE BEAT:</span>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SPONSORS } from '../constants';
 import { motion } from 'framer-motion';
@@ -42,7 +41,7 @@ const LogoPlaceholder: React.FC<{
       )}
       <span 
         className={`font-retro-heading leading-none break-words w-full px-1
-          ${isOrganizer ? 'text-xl md:text-3xl' : 'text-lg md:text-2xl'}
+          ${isOrganizer ? 'text-xl md:text-3xl' : 'text-sm md:text-2xl'}
         `}
         style={{ color: textColor, textShadow: textColor === '#FFFFFF' ? '2px 2px 0 #000' : 'none' }}
       >
@@ -98,7 +97,7 @@ export const Sponsors: React.FC = () => {
                   <span className="font-retro-sub font-bold text-xs md:text-sm tracking-wider whitespace-nowrap">OFFICIAL SPONSORS</span>
                </div>
 
-               {/* Changed grid cols on mobile to 2 instead of automatic or squished */}
+               {/* Grid optimization for mobile: 2 columns is usually better than squashed 3 or 4 */}
                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-4">
                   {sponsors.map((sponsor, idx) => (
                       <motion.div
